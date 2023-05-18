@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #cacaca;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: inline-block;
+
+  height: 100%;
+  width: 100%;
+
+  border: red 1px solid;
+}
+
+.time-line {
+  height: 90vh;
+  border-left: 10px blue;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  background-color: #fff;
+  width: 400px;
+
+  margin: 10% auto;
+  padding: 3%;
+
+  position: relative;
+
+  box-shadow: 0 8px 5px darkgray;
+}
+
+.card:nth-child(2n) {
+  margin-left: 10%;
+}
+
+.card:nth-child(2n)::after {
+  content: "";
+  border-left: 10px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  position: absolute;
+  top: 20%;
+  right: -10px;
+}
+
+.card:nth-child(2n + 1) {
+  margin-right: 10%;
+}
+
+.card:nth-child(2n + 1)::after {
+  content: "";
+  border-right: 10px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  position: absolute;
+  top: 20%;
+  left: -10px;
+}
+
+img {
+  width: 100%;
+}
+
+.date {
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button {
+  background-color: rgb(40, 77, 150);
+  color: #fff;
+  width: 65px;
+  height: 30px;
+
+  border: none;
+
+  font-size: small;
+  /* why does this do nothing ? */
+  padding: auto 30px;
+}
