@@ -18,8 +18,6 @@ main {
 
   height: 100%;
   width: 100%;
-
-  border: red 1px solid;
 }
 
 .time-line {
@@ -43,7 +41,7 @@ main {
 }
 
 .card:nth-child(2n) {
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 .card:nth-child(2n)::after {
@@ -58,7 +56,7 @@ main {
 }
 
 .card:nth-child(2n + 1) {
-  margin-right: 10%;
+  margin-right: 20%;
 }
 
 .card:nth-child(2n + 1)::after {
@@ -85,6 +83,11 @@ img {
   top: 0;
   right: 0;
 }
+
+/* .card:nth-child(2n + 1) .date {
+  /* this expands the width to entire top of card, why?
+  left: 0;
+} */
 
 button {
   background-color: rgb(40, 77, 150);
