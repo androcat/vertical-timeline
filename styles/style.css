@@ -40,6 +40,7 @@ main::before {
   left: 50%;
   /* for centering the middle of the pseudo element */
   transform: translateX(-50%);
+  z-index: -10;
 }
 /* DELETE 
 .time-line {
@@ -110,8 +111,9 @@ img {
   right: 0;
 }
 
-.card:nth-child(2n + 1) > .date {
-  right: 100%;
+.card:nth-child(odd) > .date {
+  left: 0;
+  right: unset;
 }
 
 button {
@@ -147,6 +149,27 @@ button:hover {
   position: absolute;
   left: -10%;
   transform: translateX(50%);
+}
+
+.pencil {
+  background-color: var(--primary-blue);
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#pencil-a {
+  top: 130px;
+}
+
+#pencil-b {
+  top: 590px;
+}
+
+#pencil-c {
+  top: 1125px;
 }
 
 @media (max-width: 1044px) {
